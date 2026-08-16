@@ -234,10 +234,13 @@ function buildQueue(items){
 }
 function makeOptions(q){
   const f=q.aspect, correct=q.item[f];
-  const others=DATA.items.filter(i=>i!==q.item && i[f] && i[f]!==correct);
+  // 同一テキストを持つ設問が存在するため、テキスト単位で重複を除去して選択肢を作る
+  const uniq=arr=>{const seen=new Set(),out=[];arr.forEach(t=>{if(t&&t!==correct&&!seen.has(t)){seen.add(t);out.push(t);}});return out;};
+  const others=DATA.items.filter(i=>i!==q.item);
   const otherCat=others.filter(i=>i.cat!==q.item.cat);
-  const src=otherCat.length>=3?otherCat:others;
-  const picked=shuffle(src.slice()).slice(0,3).map(i=>i[f]);
+  let pool=uniq(shuffle(otherCat.slice()).map(i=>i[f]));
+  if(pool.length<3) pool=uniq([...pool, ...shuffle(others.slice()).map(i=>i[f])]);
+  const picked=pool.slice(0,3);
   return shuffle([{t:correct,ok:true},...picked.map(t=>({t,ok:false}))]);
 }
 
