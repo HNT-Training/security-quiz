@@ -1,0 +1,21 @@
+{
+ "name": "セキュリティ問題集（NIST CSF 2.0観点）",
+ "short_name": "セキュ問題集 NIST",
+ "start_url": "./",
+ "scope": "./",
+ "display": "standalone",
+ "background_color": "#f4f6f9",
+ "theme_color": "#ea580c",
+ "icons": [
+  {
+   "src": "icon.png",
+   "sizes": "180x180",
+   "type": "image/png"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}
