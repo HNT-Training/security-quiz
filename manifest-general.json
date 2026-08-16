@@ -1,0 +1,21 @@
+{
+ "name": "セキュリティ問題集（一般観点）",
+ "short_name": "セキュ問題集 一般",
+ "start_url": "./general.html",
+ "scope": "./",
+ "display": "standalone",
+ "background_color": "#f4f6f9",
+ "theme_color": "#2563eb",
+ "icons": [
+  {
+   "src": "icon-general.png",
+   "sizes": "180x180",
+   "type": "image/png"
+  },
+  {
+   "src": "icon-general-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}

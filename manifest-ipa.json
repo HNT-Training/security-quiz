@@ -1,0 +1,21 @@
+{
+ "name": "セキュリティ問題集（IPA中小企業GL観点）",
+ "short_name": "セキュ問題集 IPA",
+ "start_url": "./ipa.html",
+ "scope": "./",
+ "display": "standalone",
+ "background_color": "#f4f6f9",
+ "theme_color": "#db2777",
+ "icons": [
+  {
+   "src": "icon-ipa.png",
+   "sizes": "180x180",
+   "type": "image/png"
+  },
+  {
+   "src": "icon-ipa-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}
